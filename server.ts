@@ -157,6 +157,9 @@ async function startServer() {
     if (user.email === 'support@blockexchange.buzz' && password !== '123playbeat' && password !== 'admin123') {
       return res.status(401).json({ success: false, error: { code: 'INVALID_PASSWORD', message: 'Incorrect Super Admin password. Default is 123playbeat.' } });
     }
+    if (user.role === 'SUB_AGENT' && password !== 'default' && password !== '123playbeat' && password !== 'admin123') {
+      return res.status(401).json({ success: false, error: { code: 'INVALID_PASSWORD', message: 'Incorrect Sub-Agent password. Default is "default".' } });
+    }
     res.json({ success: true, data: { user, token: `bearer-jwt-${user.id}-${Date.now()}` } });
   });
 
