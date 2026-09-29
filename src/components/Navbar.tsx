@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Bell, User, BarChart3, Wallet, Cpu, Settings, LogOut, ArrowRightLeft } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { Logo } from './Logo';
 
 interface NavbarProps {
   currentTab: string;
@@ -35,23 +36,13 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
 
       {/* Main Nav */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Brand with Geometric B Monogram */}
+        {/* Brand */}
         <div className="flex items-center space-x-8">
           <button 
             onClick={() => setCurrentTab('home')} 
             className="flex items-center space-x-3 text-left focus:outline-none group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#0066FF] to-[#00B8FF] flex items-center justify-center shadow-lg shadow-[#0066FF]/30 border border-white/20 relative overflow-hidden">
-              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span className="text-white font-black text-xl font-mono tracking-tighter">BX</span>
-            </div>
-            <div>
-              <div className="font-ext500 text-white tracking-wider text-base flex items-center space-x-1.5 font-sans">
-                <span className="tracking-tight">BLOCKEXCHANGE</span>
-                <span className="text-[10px] px-1.5 py-0.2 rounded bg-[#F5B942]/15 text-[#F5B942] border border-[#F5B942]/40 font-mono font-bold">PRO</span>
-              </div>
-              <div className="text-[10px] text-[#D9E2EC]/60 font-mono tracking-wider">Institutional Trading Terminal</div>
-            </div>
+            <Logo size="md" />
           </button>
 
           {/* Desktop Nav Links */}
@@ -151,4 +142,3 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
     </header>
   );
 };
-

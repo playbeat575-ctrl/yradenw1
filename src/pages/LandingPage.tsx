@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Shield, Zap, TrendingUp, Cpu, Lock, ArrowRight, CheckCircle2, ChevronRight, BarChart3 } from 'lucide-react';
 import { MarketItem } from '../types';
+import { Logo } from '../components/Logo';
 
 export const LandingPage: React.FC<{ setCurrentTab: (tab: string) => void }> = ({ setCurrentTab }) => {
   const [markets, setMarkets] = useState<MarketItem[]>([]);
@@ -22,7 +23,7 @@ export const LandingPage: React.FC<{ setCurrentTab: (tab: string) => void }> = (
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center space-x-2 bg-[#0066FF]/20 border border-[#0066FF]/40 px-3 py-1 rounded-full text-xs font-mono text-[#00B8FF]">
               <span className="w-2 h-2 rounded-full bg-[#00B8FF] animate-ping"></span>
-              <span>BlockExchange Institutional Liquidity & Trading Terminal</span>
+              <span>Coinbase Inc. Trade Institutional Liquidity & Trading Terminal</span>
             </div>
             
             <h1 className="text-4xl sm:text-6xl font-ext500 text-white tracking-tight leading-none font-sans">
@@ -30,7 +31,7 @@ export const LandingPage: React.FC<{ setCurrentTab: (tab: string) => void }> = (
             </h1>
             
             <p className="text-base sm:text-lg text-[#D9E2EC]/80 max-w-2xl leading-relaxed">
-              Enterprise-grade cryptocurrency trading platform built for professional traders, institutions, and modern investors. Access sub-second execution, advanced technical indicators, and high-yield option contracts.
+              Enterprise-grade cryptocurrency and digital asset trading platform built for professional traders, institutions, and modern investors. Access sub-second execution, advanced technical indicators, and high-yield option contracts.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">

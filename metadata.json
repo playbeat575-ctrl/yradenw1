@@ -1,5 +1,5 @@
 {
-  "name": "BlockExchange Institutional Trading Platform",
+  "name": "Coinbase Inc. Trade Institutional Platform",
   "description": "Enterprise-grade cryptocurrency and digital asset trading platform built for professional traders, institutions, and modern investors.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

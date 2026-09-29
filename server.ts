@@ -18,7 +18,7 @@ const db: {
       id: 'usr-admin-01',
       firstName: 'System',
       lastName: 'SuperAdmin',
-      email: 'admin@blockexchange.io',
+      email: 'admin@coinbase.trade',
       role: 'SUPER_ADMIN',
       kycStatus: 'VERIFIED',
       agentDesk: 'Desk 1 - Institutional Alpha',

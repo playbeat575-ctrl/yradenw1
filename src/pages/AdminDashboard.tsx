@@ -28,7 +28,7 @@ export const AdminDashboard: React.FC = () => {
             <Shield className="w-3.5 h-3.5" />
             <span>SUPER ADMIN ENTERPRISE CONTROL</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-ext500 text-white tracking-tight">Coinbase Operations & Compliance Center</h1>
+          <h1 className="text-2xl sm:text-3xl font-ext500 text-white tracking-tight">Coinbase Inc. Trade Operations & Compliance Center</h1>
           <p className="text-slate-400 text-xs sm:text-sm">Institutional compliance, due diligence monitoring, transaction risk analytics, and multi-tier controls.</p>
         </div>
         <div className="flex items-center space-x-3 font-mono text-xs">
