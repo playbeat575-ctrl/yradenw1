@@ -16,16 +16,81 @@ const db: {
   users: [
     {
       id: 'usr-admin-01',
-      firstName: 'System',
+      firstName: 'Support',
       lastName: 'SuperAdmin',
-      email: 'admin@coinbase.trade',
+      email: 'support@blockexchange.buzz',
       role: 'SUPER_ADMIN',
       kycStatus: 'VERIFIED',
       agentDesk: 'Desk 1 - Institutional Alpha',
-      invitationCodeUsed: 'BX-DESK-01',
+      invitationCodeUsed: 'PB-AG001',
       balanceUSDT: 500000.00,
       frozenUSDT: 0.00,
       createdAt: new Date(Date.now() - 90 * 86400000).toISOString()
+    },
+    {
+      id: 'usr-subagent-01',
+      firstName: 'SubAgent',
+      lastName: 'One',
+      email: 'subagent1@tradeN.com',
+      role: 'SUB_AGENT',
+      kycStatus: 'VERIFIED',
+      agentDesk: 'Desk 1 - Institutional Alpha',
+      invitationCodeUsed: 'PB-AG001',
+      balanceUSDT: 10000.00,
+      frozenUSDT: 0.00,
+      createdAt: new Date().toISOString()
+    },
+    {
+      id: 'usr-subagent-02',
+      firstName: 'SubAgent',
+      lastName: 'Two',
+      email: 'subagent2@tradeN.com',
+      role: 'SUB_AGENT',
+      kycStatus: 'VERIFIED',
+      agentDesk: 'Desk 2 - Derivatives Beta',
+      invitationCodeUsed: 'PB-AG002',
+      balanceUSDT: 10000.00,
+      frozenUSDT: 0.00,
+      createdAt: new Date().toISOString()
+    },
+    {
+      id: 'usr-subagent-03',
+      firstName: 'SubAgent',
+      lastName: 'Three',
+      email: 'subagent3@tradeN.com',
+      role: 'SUB_AGENT',
+      kycStatus: 'VERIFIED',
+      agentDesk: 'Desk 3 - Middle East & GCC',
+      invitationCodeUsed: 'PB-AG003',
+      balanceUSDT: 10000.00,
+      frozenUSDT: 0.00,
+      createdAt: new Date().toISOString()
+    },
+    {
+      id: 'usr-subagent-04',
+      firstName: 'SubAgent',
+      lastName: 'Four',
+      email: 'subagent4@tradeN.com',
+      role: 'SUB_AGENT',
+      kycStatus: 'VERIFIED',
+      agentDesk: 'Desk 4 - European OTC',
+      invitationCodeUsed: 'PB-AG004',
+      balanceUSDT: 10000.00,
+      frozenUSDT: 0.00,
+      createdAt: new Date().toISOString()
+    },
+    {
+      id: 'usr-subagent-05',
+      firstName: 'SubAgent',
+      lastName: 'Five',
+      email: 'subagent5@tradeN.com',
+      role: 'SUB_AGENT',
+      kycStatus: 'VERIFIED',
+      agentDesk: 'Desk 5 - Asia-Pacific Prime',
+      invitationCodeUsed: 'PB-AG005',
+      balanceUSDT: 10000.00,
+      frozenUSDT: 0.00,
+      createdAt: new Date().toISOString()
     },
     {
       id: 'usr-top-9921',
@@ -34,24 +99,11 @@ const db: {
       email: 'anthony.al@gmail.com',
       role: 'CUSTOMER',
       kycStatus: 'VERIFIED',
-      agentDesk: 'Desk 1 - Alpha Desk',
-      invitationCodeUsed: 'PBD-AGENT-ae001',
+      agentDesk: 'Desk 1 - Institutional Alpha',
+      invitationCodeUsed: 'PB-AG001',
       balanceUSDT: 142850.50,
       frozenUSDT: 1200.00,
       createdAt: new Date(Date.now() - 30 * 86400000).toISOString()
-    },
-    {
-      id: 'usr-steph-02',
-      firstName: 'Stephanie',
-      lastName: 'Georg',
-      email: 'steph@defi.com',
-      role: 'CUSTOMER',
-      kycStatus: 'VERIFIED',
-      agentDesk: 'Desk 3 - Gamma Desk',
-      invitationCodeUsed: 'PBD-AGENT-ae003',
-      balanceUSDT: 350000.00,
-      frozenUSDT: 35000.00,
-      createdAt: '2026-01-05T00:00:00.000Z'
     }
   ],
   markets: [
@@ -63,11 +115,11 @@ const db: {
     { symbol: 'ADA/USDT', name: 'Cardano', assetClass: 'Cardano Settlement Layer', price: 0.78, change24h: -0.45, high24h: 0.81, low24h: 0.76, volume24h: '450M' }
   ],
   subAgentDesks: [
-    { id: 'desk-1', designation: 'Desk 1 - Institutional Alpha', user: 'bxdesk01', code: 'BX-DESK-01', specialization: 'Enterprise & Whale Liquidity', status: 'ACTIVE' },
-    { id: 'desk-2', designation: 'Desk 2 - Derivatives Beta', user: 'bxdesk02', code: 'BX-DESK-02', specialization: 'High-Frequency Futures & Options', status: 'ACTIVE' },
-    { id: 'desk-3', designation: 'Desk 3 - Middle East & GCC', user: 'bxdesk03', code: 'BX-DESK-03', specialization: 'GCC Sovereign & Institutional', status: 'ACTIVE' },
-    { id: 'desk-4', designation: 'Desk 4 - European OTC', user: 'bxdesk04', code: 'BX-DESK-04', specialization: 'EU Compliance & Block Trades', status: 'ACTIVE' },
-    { id: 'desk-5', designation: 'Desk 5 - Asia-Pacific Prime', user: 'bxdesk05', code: 'BX-DESK-05', specialization: 'APAC High-Speed Routing', status: 'ACTIVE' }
+    { id: 'desk-1', designation: 'Desk 1 - Institutional Alpha', user: 'subagent1', code: 'PB-AG001', specialization: 'Enterprise & Whale Liquidity', status: 'ACTIVE' },
+    { id: 'desk-2', designation: 'Desk 2 - Derivatives Beta', user: 'subagent2', code: 'PB-AG002', specialization: 'High-Frequency Futures & Options', status: 'ACTIVE' },
+    { id: 'desk-3', designation: 'Desk 3 - Middle East & GCC', user: 'subagent3', code: 'PB-AG003', specialization: 'GCC Sovereign & Institutional', status: 'ACTIVE' },
+    { id: 'desk-4', designation: 'Desk 4 - European OTC', user: 'subagent4', code: 'PB-AG004', specialization: 'EU Compliance & Block Trades', status: 'ACTIVE' },
+    { id: 'desk-5', designation: 'Desk 5 - Asia-Pacific Prime', user: 'subagent5', code: 'PB-AG005', specialization: 'APAC High-Speed Routing', status: 'ACTIVE' }
   ],
   binaryTrades: [],
   spotOrders: [],

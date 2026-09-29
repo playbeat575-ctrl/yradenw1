@@ -13,7 +13,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'login', setCu
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [invitationCode, setInvitationCode] = useState('PBD-AGENT-ae001');
+  const [invitationCode, setInvitationCode] = useState('PB-AG001');
   const [error, setError] = useState<string | null>(null);
   const { login, register } = useAuth();
 
@@ -26,7 +26,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'login', setCu
       if (success) {
         setCurrentTab('dashboard');
       } else {
-        setError('Invalid credentials. Try admin@coinbase.ae or register with a sub-agent code.');
+        setError('Invalid credentials. Try support@blockexchange.buzz or subagent1@tradeN.com.');
       }
     } else {
       const res = await register({ firstName, lastName, email, pass: password, code: invitationCode });
